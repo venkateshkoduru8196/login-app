@@ -1,0 +1,58 @@
+/* Topbar Styles */
+.topbar {
+  width: 100%; /* Full width */
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: flex-end; /* Aligns both username and button to the right */
+  align-items: center; /* Vertically center the content */
+  padding: 0 20px; /* Padding for spacing */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* For Username styling */
+.topbar span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px; /* Space between username and button */
+}
+
+/* For Logout Button styling */
+.topbar button {
+  padding: 8px 20px;
+  background-color: #d9534f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.topbar button:hover {
+  background-color: #c9302c;
+}
+
+.topbar button:focus {
+  outline: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 15px; /* Reduce padding on mobile */
+  }
+
+  .topbar span {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .topbar button {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}

@@ -1,0 +1,32 @@
+/* DashboardPage.css - Layout Styles */
+.dashboard-container {
+  display: flex;
+  height: 100%;
+  padding-left: 250px; /* Make space for the Sidebar */
+}
+
+.dashboard-main {
+  flex: 1;
+  background-color: #f4f7fc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
