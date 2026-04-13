@@ -13,24 +13,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # React build
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
       - name: Build React
-        working-directory: "deploy basic/login"
+        working-directory: login
         run: |
           npm install
           npm run build
 
-      # FTP Deploy
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "deploy basic/login/dist/"
+          local-dir: login/dist/
           server-dir: ${{ secrets.FTP_DIR }}
